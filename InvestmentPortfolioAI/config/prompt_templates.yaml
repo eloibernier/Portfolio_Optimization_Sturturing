@@ -1,0 +1,14 @@
+valuation_summary:
+  template: |
+    Based on the following financial data, provide a valuation summary.
+    {{financial_data}}
+
+risk_assessment:
+  template: |
+    Assess the risk level of this portfolio given the data:
+    {{portfolio_details}}
+
+earnings_summary:
+  template: |
+    Read the following earnings call transcript and extract key takeaways:
+    {{transcript}}

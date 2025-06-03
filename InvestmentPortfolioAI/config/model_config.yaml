@@ -1,0 +1,14 @@
+provider: openai                # or anthropic, local, etc.
+model_name: gpt-4
+api_key: "your_api_key_here"   # Use env var or secrets manager in production
+endpoint: "https://api.openai.com/v1/chat/completions"
+
+temperature: 0.7
+max_tokens: 1000
+top_p: 1.0
+frequency_penalty: 0.0
+presence_penalty: 0.0
+
+# Optional:
+stream: false
+stop_sequences: ["</end>"]
