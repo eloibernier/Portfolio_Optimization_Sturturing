@@ -1,6 +1,6 @@
 provider: openai                # or anthropic, local, etc.
 model_name: gpt-4
-api_key: "your_api_key_here"   # Use env var or secrets manager in production
+api_key: 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  # Use env var or secrets manager in production
 endpoint: "https://api.openai.com/v1/chat/completions"
 
 temperature: 0.7
