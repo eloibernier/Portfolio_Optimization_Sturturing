@@ -28,3 +28,5 @@ OptimizedPortfolio = {
     "QQQ": 0,
     "SPY": 5000
 }
+
+
