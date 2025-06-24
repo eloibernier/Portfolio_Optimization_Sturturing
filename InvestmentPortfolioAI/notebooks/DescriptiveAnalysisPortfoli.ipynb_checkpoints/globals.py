@@ -11,7 +11,8 @@ Asset_Amounts = {
     "NVDA": 4500,
     "V": 3000,
     "QQQ": 0,
-    "SPY": 0
+    "SPY": 0,
+    "AIR.PA": 0
 }
 
 
@@ -26,7 +27,8 @@ OptimizedPortfolio = {
     "NVDA": 4500,
     "V": 50000,
     "QQQ": 0,
-    "SPY": 5000
+    "SPY": 5000,
+    "AIR.PA":0
 }
 
 
