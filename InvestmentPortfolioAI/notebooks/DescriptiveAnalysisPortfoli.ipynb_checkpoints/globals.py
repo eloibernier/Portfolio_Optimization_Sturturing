@@ -6,13 +6,13 @@ Asset_Amounts = {
     "GOOGL": 3000,
     "AMZN": 4000,
     "MSFT": 3500,
-    "TSLA": 2500,
     "NFLX": 2000,
-    "NVDA": 4500,
+    "PLTR": 2000,
+    "DOL": 4500,
     "V": 3000,
     "QQQ": 0,
     "SPY": 0,
-    "AIR.PA": 0
+    "AIR": 0
 }
 
 
@@ -22,13 +22,13 @@ OptimizedPortfolio = {
     "GOOGL": 3000,
     "AMZN": 4000,
     "MSFT": 3500,
-    "TSLA": 50000,
     "NFLX": 2000,
-    "NVDA": 4500,
+    "PLTR": 20000,
+    "DOL": 4500,
     "V": 50000,
     "QQQ": 0,
     "SPY": 5000,
-    "AIR.PA":0
+    "AIR":0
 }
 
 
