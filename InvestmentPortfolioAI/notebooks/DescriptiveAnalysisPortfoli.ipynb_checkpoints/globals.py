@@ -1,4 +1,13 @@
-# Set globale variables for the portfolio analysis
+# Set global variables for the portfolio analysis
+import pandas as pd
+
+# Ensure the file exists and print a message if not
+import os
+csv_path = "/Users/eloibernier/Documents/Portfolio_Optimization_Sturturing/InvestmentPortfolioAI/notebooks/DescriptiveAnalysisPortfoli.ipynb_checkpoints/exports/portfolio.csv"
+
+currentportfolio = pd.read_csv(csv_path)
+print(currentportfolio)
+
 
 # Define the amount invested in each asset
 Asset_Amounts = {
