@@ -32,7 +32,7 @@ app.layout = html.Div(children=[
     html.H1(children='Optimize your Portfolio',
              style={
                  'textAlign': 'center',
-                 'color': "#0A1358"
+                 'color': "#0A0541"
              }),
 
     html.Div(children='''
