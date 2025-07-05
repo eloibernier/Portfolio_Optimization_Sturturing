@@ -28,8 +28,37 @@ def generate_table_rows(num_rows=10):
         rows.append(row)
     return rows
 
+toggles_list = ['Willing to lose...', 'allow crypto', 'allow commodities', 'minimum bond exposure', 'maximum trading limit']
+
+def generate_toggles(num_rows=5):
+    toggles = []
+    for i in range(num_rows):
+        if toggles_list[i] in ['allow crypto', 'allow commodities']:
+            toggle_input = dcc.Checklist(
+                id={'type': 'toggle-input', 'index': i},
+                options=[{'label': '', 'value': 'yes'}],
+                value=[],
+                style={'marginLeft': '10px'}
+            )
+        else:
+            toggle_input = dcc.Input(
+                id={'type': 'toggle-input', 'index': i},
+                type='number',
+                min=0,
+                max=100,
+                step=1,
+                placeholder='0-100%'
+            )
+        toggle = html.Tr([
+            html.Td(toggles_list[i]),
+            html.Td(toggle_input)
+        ], style={'marginTop': 10})
+        toggles.append(toggle)
+    return toggles
+
+
 app.layout = html.Div(children=[
-    html.H1(children='Optimize your Portfolio',
+    html.H1(children='Optimize your Portfolioll',
              style={
                  'textAlign': 'center',
                  'color': "#0A0541"
@@ -50,6 +79,20 @@ app.layout = html.Div(children=[
             generate_table_rows(10)
         )
     ], style={'margin': 'auto', 'width': '50%', 'marginTop': 30}),
+
+    # Add this to your app.layout, for example after your stock table
+    html.Table([
+        html.Thead(
+            html.Tr([
+                html.Th('Toggle Option'),
+                html.Th('Value')
+            ])
+        ),
+        html.Tbody(
+            generate_toggles(5)
+        )
+    ], style={'margin': 'auto', 'width': '50%', 'marginTop': 30}),
+
     html.Br(),
     html.Button("That is my portfolio", id="download-btn"),
     dcc.Download(id="download-dataframe-csv")
@@ -62,6 +105,8 @@ app.layout = html.Div(children=[
      State({'type': 'amount-input', 'index': dash.ALL}, 'value')],
     prevent_initial_call=True
 )
+
+
 def download_portfolio(n_clicks, tickers, amounts):
     # Filter out empty rows
     data = [
